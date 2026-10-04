@@ -21,6 +21,7 @@ int validate_args(int argc,char** argv) {
     for (int i=1; i<argc; i++) {
         char* path = argv[i];
         if(strcmp(path+(strlen(path)-4),".txt") != 0) {
+            printf("Error in file format\n");
             return FAILURE;
         }
 
